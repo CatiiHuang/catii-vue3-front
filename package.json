@@ -1,13 +1,18 @@
 {
   "name": "create-catii-vue3-front",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "homepage": "https://github.com/CatiiHuang/catii-vue3-front",
-  "scripts": {
+  "bin": {
     "create-catii-vue3-front": "index.js",
     "cva": "index.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CatiiHuang/catii-vue3-front.git",
+    "directory": "create-catii-vue3-front"
+  },
+  "author": "catiihuang",
   "license": "ISC"
 }

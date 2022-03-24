@@ -1,16 +1,29 @@
 {
-  "name": "catii-vue3-front",
-  "private": false,
-  "version": "0.0.1",
-  "homepage": "https://github.com/CatiiHuang/catii-vue3-front",
-  "scripts": {
-    "dev": "vite --mode development",
-    "dev:prd": "vite --mode production",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint -c .eslintrc.js --ext .js,.vue src",
-    "lint:fix": "eslint -c .eslintrc.js --fix --ext .js,.vue src"
+  "_from": "catii-vue3-front",
+  "_id": "catii-vue3-front@0.0.3",
+  "_inBundle": false,
+  "_integrity": "sha512-0w34HY+N0uW7GqzLqfPdewHcx2lH9jmhCHCIFXMrZMT2rLM3eCsviMLlCqwjESxP64L/tzCtNfNvXnxFwSWi3Q==",
+  "_location": "/catii-vue3-front",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "catii-vue3-front",
+    "name": "catii-vue3-front",
+    "escapedName": "catii-vue3-front",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/catii-vue3-front/-/catii-vue3-front-0.0.3.tgz",
+  "_shasum": "8abecfd8d9f92f15c39bb80fd509ad64aed1cfaa",
+  "_spec": "catii-vue3-front",
+  "_where": "/Users/guoqinhuang/Desktop/StudySpace/catii-vue3-front/catii-vue3-front-template",
+  "bundleDependencies": false,
   "dependencies": {
     "axios": "^0.26.0",
     "babel-eslint": "^10.1.0",
@@ -21,6 +34,7 @@
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2"
   },
+  "deprecated": false,
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.2",
     "autoprefixer": "^10.4.2",
@@ -35,5 +49,17 @@
     "prettier": "^2.5.1",
     "vite": "^2.8.0",
     "vite-plugin-eslint": "^1.3.0"
-  }
+  },
+  "homepage": "https://github.com/CatiiHuang/catii-vue3-front",
+  "name": "catii-vue3-front",
+  "private": false,
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite --mode development",
+    "dev:prd": "vite --mode production",
+    "lint": "eslint -c .eslintrc.js --ext .js,.vue src",
+    "lint:fix": "eslint -c .eslintrc.js --fix --ext .js,.vue src",
+    "preview": "vite preview"
+  },
+  "version": "0.0.3"
 }
