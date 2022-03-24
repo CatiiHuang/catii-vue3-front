@@ -1,0 +1,1 @@
+import{o as e,c as o,a as t}from"./vendor.f705a243.js";import{_ as s}from"./index.a67aaf9e.js";const a={},r=t("h1",null,"this is Test Page Two!",-1),c=[r];function n(_,i,d,p,l,f){return e(),o("div",null,c)}var h=s(a,[["render",n]]);export{h as default};

@@ -1,0 +1,12 @@
+.ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ellipsis-multi(@param: 1) {
+  display: -webkit-box; /* stylelint-disable-line */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @param;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
