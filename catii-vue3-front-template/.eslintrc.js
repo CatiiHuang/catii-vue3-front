@@ -9,9 +9,10 @@ module.exports = {
   extends: ['eslint-config-tencent', 'plugin:vue/vue3-recommended', 'prettier'],
   rules: {
     'vue/multi-word-component-names': 'off',
-    'vue/require-default-prop': 'off',
     'vue/html-quotes': ['error', 'double'],
     'vue/script-setup-uses-vars': 'error',
+    'vue/require-default-prop': 'off',
+    'vue/comment-directive': 'off',
     'no-param-reassign': 0,
     'func-style': 0,
   },
