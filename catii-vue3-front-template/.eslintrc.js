@@ -15,6 +15,9 @@ module.exports = {
     'vue/comment-directive': 'off',
     'no-param-reassign': 0,
     'func-style': 0,
+    'vue/require-explicit-emits': 0,
+    'vue/require-prop-types': 0,
+    'vue/attribute-hyphenation': 0,
   },
   parser: 'vue-eslint-parser',
   parserOptions: {
