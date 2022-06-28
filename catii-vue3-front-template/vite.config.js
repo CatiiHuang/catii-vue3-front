@@ -8,7 +8,12 @@ export default () =>
     define: {
       'process.env': process.env,
     },
-    plugins: [vue(), eslintPlugin()],
+    plugins: [
+      vue(),
+      eslintPlugin({
+        cache: false,
+      }),
+    ],
     resolve: {
       alias: {
         '@': resolve(__dirname, 'src'),
