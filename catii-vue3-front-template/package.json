@@ -35,6 +35,6 @@
     "npm": "^8.5.1",
     "prettier": "^2.5.1",
     "vite": "^2.8.0",
-    "vite-plugin-eslint": "^1.3.0"
+    "vite-plugin-eslint": "^1.6.1"
   }
 }
