@@ -27,13 +27,12 @@ const copyProjectFile = (sourcePath, targetPath) => {
 // 重设项目名
 const resetProjectName = (projectName, targetPath, templatePath) => {
   if (!projectName) return;
+  if (projectName.includes('/')) return;
   const pkg = require(path.join(`${templatePath}/`, `package.json`));
-  pkg.name = projectName;
-  fs.writeFileSync(
-    path.join(targetPath, 'package.json'),
-    JSON.stringify(pkg, null, 2)
-  );
+  pkg.name = projectName.toLowerCase();
+  fs.writeFileSync(path.join(targetPath, 'package.json'), JSON.stringify(pkg, null, 2));
 };
+
 // BeginProcess
 (() => {
   const [, , projectName] = process.argv;
