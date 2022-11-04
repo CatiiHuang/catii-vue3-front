@@ -34,6 +34,7 @@ export default () =>
         '/cgi/': {
           target: 'http://127.0.0.1:8000/', // 代理的目标地址
           rewrite: (path) => path.replace(/cgi/, ''), // 路径重写
+          headers: {},
           changeOrigin: true,
         },
       },

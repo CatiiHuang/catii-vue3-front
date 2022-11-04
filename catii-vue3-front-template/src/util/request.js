@@ -6,23 +6,38 @@ export const request = axios.create({
   timeout: 600000,
 });
 
+/**
+ * 接口返回标准
+ * {
+ *   data,
+ *   code,
+ *   msg
+ * }
+ */
 request.interceptors.response.use(
   (res) => {
+    const {
+      data,
+      data: { code, msg },
+    } = res;
     // 默认均需要检查 status
-    if (!res) {
-      ElMessage.error('接口错误');
+    if (!res || code !== 200) {
+      ElMessage.error(msg);
       return Promise.reject(res);
     }
-    return res;
+    return data;
   },
   (err) => {
-    let { message: msg } = err;
-    if (/^timeout/i.test(msg)) {
-      msg = '请求超时';
-    } else if (/^network error/i.test(msg)) {
-      msg = '网络错误';
+    const { msg, message } = err;
+    if (/^timeout/i.test(msg || message)) {
+      ElMessage.error('请求超时');
+      return;
     }
-    ElMessage.error(msg);
+    if (/^network error/i.test(msg || message)) {
+      ElMessage.error('网络错误');
+      return;
+    }
+    ElMessage.error(msg || message);
     return Promise.reject(err);
   }
 );
