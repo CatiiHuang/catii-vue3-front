@@ -9,9 +9,9 @@ export const request = axios.create({
 /**
  * 接口返回标准
  * {
- *   data,
- *   code,
- *   msg
+ *   data, // 数据
+ *   code, // 请求状态 code!==200 会被拦截并报错
+ *   msg, // 报错信息
  * }
  */
 request.interceptors.response.use(

@@ -1,6 +1,6 @@
 /**
- * ref => formRef节点
- * stop => 是否阻断async函数
+ * {ref} formRef节点
+ * {stop} 是否阻断async函数
  * **/
 export const formCheckHook = (ref, stop = true) =>
   new Promise(async (resolve, reject) => {

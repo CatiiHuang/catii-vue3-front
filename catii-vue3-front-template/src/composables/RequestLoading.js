@@ -1,5 +1,6 @@
 import { ref } from 'vue';
-/**
+/*
+ * 接口加载组合API,自动绑定接口Loading状态
  * setup 函数中调用
  * const { loadingState,initiateRequest } = useRequestLoading();
  * const { data } = await initiateRequest(request)
