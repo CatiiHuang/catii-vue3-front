@@ -1,33 +1,26 @@
-<script setup></script>
+<script setup>
+import PageHeader from './components/PageHeader.vue';
+import AsideMenu from './components/AsideMenu.vue';
+</script>
 
 <template>
   <div class="app-component">
-    <h1 class="page-title">
-      Project Init Success!!!
-      <el-result icon="success" title="Success" sub-title="Load Element-plus"> </el-result>
-      <div>
-        <el-button type="primary"> <router-link to="/one">page one</router-link> </el-button>
-        <el-button type="success" t><router-link to="/two">page two</router-link> </el-button>
-      </div>
-    </h1>
-    <div class="page-contetn">
-      <router-view></router-view>
-    </div>
+    <t-layout>
+      <t-aside :style="{ width: 'auto' }"><AsideMenu></AsideMenu></t-aside>
+      <t-layout>
+        <t-header><PageHeader></PageHeader></t-header>
+        <t-content>
+          <div class="page-contetn">
+            <router-view></router-view>
+          </div>
+        </t-content>
+        <!-- <t-footer>Footer</t-footer> -->
+      </t-layout>
+    </t-layout>
   </div>
 </template>
 
 <style lang="less">
 .app-component {
-  text-align: center;
-
-  h1 {
-    margin-top: 7.5vh;
-  }
-  .page-contetn {
-    height: 200px;
-    width: 100%;
-    border: 1px solid #ccc;
-    margin: 0 20px;
-  }
 }
 </style>

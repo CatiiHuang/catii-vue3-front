@@ -2,11 +2,11 @@ import { ref } from 'vue';
 /*
  * 接口加载组合API,自动绑定接口Loading状态
  * setup 函数中调用
- * const { loadingState,initiateRequest } = useRequestLoading();
- * const { data } = await initiateRequest(request)
+ * const [loadingState,initiateRequest] = useRequestLoading(request);
+ * const { data } = await initiateRequest(payload);
  * loading状态将会自动更新
  */
-export default () => {
+export const useRequestLoading = (request) => {
   const timer = ref(null);
   const loadingState = ref(false);
 
@@ -22,24 +22,43 @@ export default () => {
     loadingState.value = false;
   };
 
-  const initiateRequest = (request) =>
+  const initiateRequest = (payload) =>
     new Promise((resolve, reject) => {
       startRequestLoading();
-      request
+      request(payload)
         .then((data) => {
-          stopRequestLoading();
           resolve(data);
         })
         .catch((err) => {
-          stopRequestLoading();
           reject(err);
+        })
+        .finally(() => {
+          stopRequestLoading();
         });
     });
-
-  return {
+  return [
     loadingState,
     initiateRequest,
     stopRequestLoading,
     startRequestLoading,
-  };
+  ];
 };
+
+/**
+ * {ref} formRef节点
+ * {stop} 是否阻断async函数
+ * **/
+export const formCheckHook = (ref, stop = true) =>
+  new Promise(async (resolve, reject) => {
+    const validate = ref.validate || ref.value.validate;
+    const res = await validate();
+    if (res === true) {
+      resolve(true);
+      return;
+    }
+    if (stop === true) {
+      reject(false);
+      return;
+    }
+    resolve(false);
+  });
