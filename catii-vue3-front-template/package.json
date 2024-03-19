@@ -13,6 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "axios": "^0.26.0",
     "babel-eslint": "^10.1.0",
@@ -21,13 +22,14 @@
     "stylus-loader": "^6.2.0",
     "tdesign-icons-vue-next": "^0.2.2",
     "tdesign-vue-next": "^1.8.1",
-    "vite": "^3.2.7",
+    "vite-plugin-eslint": "^1.8.1",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^2.2.2",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
     "autoprefixer": "^10.4.2",
     "element-plus": "^2.0.2",
     "eslint": "^8.9.0",
@@ -38,8 +40,7 @@
     "install": "^0.13.0",
     "npm": "^8.5.1",
     "prettier": "^2.5.1",
-    "vite": "^3.2.7",
-    "vite-plugin-eslint": "^1.6.1"
-  },
-  "repository": "https://github.com/CatiiHuang/catii-vue3-front.git"
+    "vite": "^5.1.6",
+    "vite-plugin-eslint": "^1.8.1"
+  }
 }
